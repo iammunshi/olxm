@@ -1,0 +1,27 @@
+.numbers{
+    width:70px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#fff;
+    background-color: #1E2326;
+    border-color: #1E2326;
+}
+.operators{
+    width:70px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#fff;
+    background-color: #5D4CB7;
+    border-color:#5D4CB7;
+}
+.equalTo{
+    width:70px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#000;
+    background-color: #F8C606;
+    border-color:#F8C606;
+}
