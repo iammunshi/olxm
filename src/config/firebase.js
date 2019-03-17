@@ -538,6 +538,20 @@ function getUserById(id){
         })
     })
 }
+function getRoomsByUserId(id){
+    return new Promise((resolve, reject) => {
+        db.collection('chatrooms').where('users.'+id, '==', true).get().then(docs=>{
+            console.log(docs)
+            let rooms=[]
+            docs.forEach((snapshot) => {
+                rooms.push({
+                    id: snapshot.id, data: snapshot.data()
+                })
+            })
+            resolve(rooms)
+        })
+    })
+}
 export {
     registerFB,
     loginFB,
@@ -563,5 +577,6 @@ export {
     sendMessageToDb,
     getCurrentUserId,
     getUserById,
-    getUsers
+    getUsers,
+    getRoomsByUserId
 }

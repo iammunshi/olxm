@@ -128,6 +128,12 @@ class Header extends Component {
                                     <NavLink onClick={this.home}><Link to="/">Home</Link></NavLink>
                                 </NavItem>
                             }
+                            {
+                                user &&
+                                <NavItem>
+                                    <NavLink><Link to="/myChatRooms">My Chat Rooms</Link></NavLink>
+                                </NavItem>
+                            }
                             {user &&
                                 <NavItem>
                                     <NavLink href="#" onClick={this.profile}><Link to="/profile">Profile</Link></NavLink>

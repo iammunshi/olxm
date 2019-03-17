@@ -8,6 +8,7 @@ import Register from '../components/register'
 import Login from '../components/login'
 import Profile from '../components/profile';
 import Chat from '../components/chat'
+import ChatRooms from '../components/chatRooms';
 import ChangePassword from '../components/changePassword'
 import AddItem from '../components/addItem';
 import { Container, Row, Button, Col } from 'reactstrap';
@@ -25,6 +26,7 @@ const BasicExample = () => (
             <Route path="/chat/:id" component={Chat} />
             <AuthRoute path="/login" component={Login} />
             <AuthRoute path="/register" component={Register} />
+            <PrivateRoute path="/myChatRooms" component={ChatRooms} />
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/addAd" component={AddItem} />
             <PrivateRoute path="/changePassword" component={ChangePassword} />
